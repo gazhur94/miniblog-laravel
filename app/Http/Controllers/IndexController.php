@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Article;
+use App\Task;
 
 class IndexController extends Controller
 {
@@ -11,36 +11,43 @@ class IndexController extends Controller
     {
         $game1 = 'Бот';
         $game2 = 'Плейер';
+        
+        $tasks = Task::All();
 
-        $articles = Article::select(['title'])->first();
 
-
-        //dump($articles);
-        return view('main')->with(['game1'=>$game1, 'game2'=>$game2, 'articles'=>$articles]);
+        //dump($tasks);
+        return view('main')->with(['tasks'=>$tasks]);
     }
-    public function add()
+    public function oneTask($id)
     {
-       // dump($_POST);
-        return view('add');
+        $task = Task::find($id);
+        //dump($tasks);
+        dump($task->body);
+        return view('task')->with(['task'=>$task]);
     }
-    public function store(Request $request)
-    {
-        $this->validate($request, 
-        [
-                    'title' => 'required|max:255|unique:articles',
-                    'text' => 'required'
-        ]);   
+    // public function add()
+    // {
+    //    // dump($_POST);
+    //     return view('add');
+    // }
+    // public function store(Request $request)
+    // {
+    //     $this->validate($request, 
+    //     [
+    //                 'title' => 'required|max:255|unique:articles',
+    //                 'text' => 'required'
+    //     ]);   
         
         
-        $data = $request->all();
+    //     $data = $request->all();
 
-        $article = new Article;
-        $article->fill($data);
+    //     $article = new Article;
+    //     $article->fill($data);
 
-        $article->save();
+    //     $article->save();
         
             
        
-        return redirect('/');
-    }
+    //     return redirect('/');
+    // }
 }

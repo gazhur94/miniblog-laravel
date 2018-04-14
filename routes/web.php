@@ -13,11 +13,7 @@
 
 Route::get('/', 'IndexController@index');
 
-Route::get('/add', 'IndexController@add');
-Route::post('/add', 'IndexController@store')->name('articleStore');
+Route::get('/{id}', 'IndexController@oneTask');
+// Route::post('/add', 'IndexController@store')->name('articleStore');
 
-Route::delete('/delete/{article}', function()
-
-{
-
-});
+// Route::delete('/delete/{article}', function(){});

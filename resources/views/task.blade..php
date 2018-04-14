@@ -9,9 +9,7 @@
 		<a href="/playerVSbot" class="time days" style="width:320px; color:white">1</a>
 	</div> -->
             
-	<ul>
-		@foreach ($tasks as $task)
-			<li>{{$task->body}}</li>
-		@endforeach
+	<ul>	
+		<li>{{$task->body}}</li>	
 	</ul>
 @endsection		
