@@ -12,3 +12,12 @@
 */
 
 Route::get('/', 'IndexController@index');
+
+Route::get('/add', 'IndexController@add');
+Route::post('/add', 'IndexController@store')->name('articleStore');
+
+Route::delete('/delete/{article}', function()
+
+{
+
+});
