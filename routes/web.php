@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', 'IndexController@index');
+Route::get('/', 'PostController@index');
 
-Route::get('/{id}', 'IndexController@oneTask');
-// Route::post('/add', 'IndexController@store')->name('articleStore');
+//Route::get('/{id}', 'IndexController@oneTask');
 
-// Route::delete('/delete/{article}', function(){});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

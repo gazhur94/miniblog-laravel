@@ -8,8 +8,10 @@
 	<div class="countdown circled small" style="text-align:center">
 		<a href="/playerVSbot" class="time days" style="width:320px; color:white">1</a>
 	</div> -->
-            
-	<ul>	
-		<li>{{$task->body}}</li>	
-	</ul>
+    @if ($task)       
+		<ul>	
+
+			<li><h2>{{$task->body}}</h2></li>	
+		</ul>
+	@endif
 @endsection		
