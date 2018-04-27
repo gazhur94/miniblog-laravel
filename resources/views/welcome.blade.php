@@ -1,95 +1,47 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
+<script src="https://use.fontawesome.com/1dec14be15.js"></script>
+    <div class="container-fluid stylish-form">
+      <h2 class="text-center">Stylish Signup Page Using Bootstrap</h2>
+      <div class="row mar20" >
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="inner-section">
+            <form method="POST" action="https://google.co.in">
+              <div class="mar20 inside-form">
+                <h2 class="font_white text-center">SIGN UP</h2>
+                <ul>
+                  <li class="icon-holder dsp-flex">
+                    <i class="fa fa-facebook "></i>
+                  </li>
+                  <li class="icon-holder dsp-flex">
+                    <i class="fa fa-twitter "></i>
+                  </li>
+                  <li class="icon-holder dsp-flex">
+                    <i class="fa fa-instagram "></i>
+                  </li>
+                </ul>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-pencil "></i></span>
+                  <input type="text" class="form-control" name="text" placeholder="First Name...">
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-envelope "></i></span>
+                  <input type="email" class="form-control" name="text" placeholder="Email...">
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-lock "></i></span>
+                  <input type="password" class="form-control" name="text" placeholder="Password...">
                 </div>
-            </div>
+                <div class="footer text-center">
+                  <a href="http://vijender.in/" class="btn btn-neutral btn-round btn-lg">Get Started</a>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-    </body>
-</html>
+      </div>
+      <h2 class="text-center font_white">Thank You For Visiting This Snippet</h2>
+    </div>
