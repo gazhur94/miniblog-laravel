@@ -3,7 +3,7 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<script src="https://use.fontawesome.com/1dec14be15.js"></script>
+<!-- <script src="https://use.fontawesome.com/1dec14be15.js"></script> -->
     <div class="container-fluid stylish-form">
       <h2 class="text-center">Stylish Signup Page Using Bootstrap</h2>
       <div class="row mar20" >
