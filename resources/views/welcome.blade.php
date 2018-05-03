@@ -18,13 +18,16 @@
                 
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-pencil "></i></span>
-                  <input type="text" class="form-control" name="text" placeholder="Логін...">
+                  <input type="text" class="form-control" name="name" placeholder="Логін...">
                 </div>
-               
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-lock "></i></span>
+                  <input type="email" class="form-control" name="email" placeholder="Емейл...">
+                </div>
                
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-lock "></i></span>
-                  <input type="password" class="form-control" name="text" placeholder="Пароль...">
+                  <input type="password" class="form-control" name="password" placeholder="Пароль...">
                 </div>
                 <div class="footer text-center">
                   <a href="http://vijender.in/" class="btn btn-neutral btn-round btn-lg">Get Started</a>
