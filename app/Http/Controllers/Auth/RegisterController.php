@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -39,6 +40,34 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
+
+    public function register(Request $request)
+    {
+        try
+        {
+
+            $this->validator($request->all())->validate();
+        }
+        catch(\Exception $e)
+        {
+            dd($e);
+
+        }
+
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $password = $request->input('password');
+        $objUser = $this->create(['name' => $name, 'email' => $email, 'password' => $password]);
+        // if ($isAuth)
+        // {
+        //     $this->guard()->login($user);
+        // }
+        //dd($objUser);
+        
+        return $this->registered($request, $user)
+                        ?: redirect($this->redirectPath());
+    }
+
 
     /**
      * Get a validator for an incoming registration request.
