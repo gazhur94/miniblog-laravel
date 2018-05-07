@@ -64,8 +64,7 @@ class RegisterController extends Controller
         // }
         //dd($objUser);
         
-        return $this->registered($request, $user)
-                        ?: redirect($this->redirectPath());
+        return redirect(route('account'));
     }
 
 
