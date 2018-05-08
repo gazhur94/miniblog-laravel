@@ -1,13 +1,8 @@
-<head>
-  <title>Blog</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-</head>
 
-<body>
-  
+
+@extends('layouts.app')
+
+@section('content')
 
   <script src="js/icons.js"></script>
     <div class="container-fluid stylish-form">
@@ -47,4 +42,4 @@
       </div>
       <h2 class="text-center font_white">Thank You For Visiting This Snippet</h2>
     </div>
-</body>
+@endsection
