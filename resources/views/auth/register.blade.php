@@ -4,42 +4,74 @@
 
 @section('content')
 
-  <script src="js/icons.js"></script>
-    <div class="container-fluid stylish-form">
-      <h2 class="text-center">Stylish Signup Page Using Bootstrap</h2>
-      <div class="row mar20" >
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="inner-section">
-            <form method="POST" >
-            {!! csrf_field()!!}
-              <div class="mar20 inside-form">
-                <h2 class="font_white text-center">Реєстрація</h2>
-                
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-pencil "></i></span>
-                  <input type="text" class="form-control" name="name" placeholder="Логін...">
-                </div>
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-lock "></i></span>
-                  <input type="email" class="form-control" name="email" placeholder="Емейл...">
-                </div>
+<div class="container">
+           
+           <header>
+               <h1>Login and Registration Form</h1>
                
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-lock "></i></span>
-                  <input type="password" class="form-control" name="password" placeholder="Пароль...">
-                </div>
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-lock "></i></span>
-                  <input type="password" class="form-control" name="password_confirmation" placeholder="Пароль ще раз...">
-                </div>
-                <div class="footer text-center">
-                  <button type="submit"  class="btn btn-neutral btn-round btn-lg">Реєстрація</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <h2 class="text-center font_white">Thank You For Visiting This Snippet</h2>
-    </div>
+           </header>
+           <section>				
+               <div id="container_demo" >
+                   <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                   <a class="hiddenanchor" id="toregister"></a>
+                   <a class="hiddenanchor" id="tologin"></a>
+                   <div id="wrapper">
+                       <div id="login" class="animate form">
+                           <form  action="mysuperscript.php" autocomplete="on"> 
+                               <h1>Log in</h1> 
+                               <p> 
+                                   <label for="username" class="uname" > Your email or username </label>
+                                   <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                               </p>
+                               <p> 
+                                   <label for="password" class="youpasswd"> Your password </label>
+                                   <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" /> 
+                               </p>
+                               <p class="keeplogin"> 
+                                   <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+                                   <label for="loginkeeping">Keep me logged in</label>
+                               </p>
+                               <p class="login button"> 
+                                  <a href="http://cookingfoodsworld.blogspot.in/" target="_blank" ></a>
+                               </p>
+                               <p class="change_link">
+                                   Not a member yet ?
+                                   <a href="#toregister" class="to_register">Join us</a>
+                               </p>
+                           </form>
+                       </div>
+
+                       <div id="register" class="animate form">
+                           <form  action="mysuperscript.php" autocomplete="on"> 
+                               <h1> Sign up </h1> 
+                               <p> 
+                                   <label for="usernamesignup" class="uname" >Your username</label>
+                                   <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+                               </p>
+                               <p> 
+                                   <label for="emailsignup" class="youmail"  > Your email</label>
+                                   <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/> 
+                               </p>
+                               <p> 
+                                   <label for="passwordsignup" class="youpasswd" >Your password </label>
+                                   <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                               </p>
+                               <p> 
+                                   <label for="passwordsignup_confirm" class="youpasswd" >Please confirm your password </label>
+                                   <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                               </p>
+                               <p class="signin button"> 
+                                   <input type="submit" value="Sign up"/> 
+                               </p>
+                               <p class="change_link">  
+                                   Already a member ?
+                                   <a href="#tologin" class="to_register"> Go and log in </a>
+                               </p>
+                           </form>
+                       </div>
+                       
+                   </div>
+               </div>  
+           </section>
+       </div>
 @endsection
