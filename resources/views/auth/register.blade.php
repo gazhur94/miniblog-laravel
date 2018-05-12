@@ -32,7 +32,7 @@
                                    <label for="loginkeeping">Keep me logged in</label>
                                </p>
                                <p class="login button"> 
-                                  <a href="http://cookingfoodsworld.blogspot.in/" target="_blank" ></a>
+                                  <input type="submit" value="Sign in"/>
                                </p>
                                <p class="change_link">
                                    Not a member yet ?
