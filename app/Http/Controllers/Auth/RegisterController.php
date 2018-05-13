@@ -53,7 +53,7 @@ class RegisterController extends Controller
             dd($e);
 
         }
-
+        dd('register');
         $name = $request->input('name');
         $email = $request->input('email');
         $password = $request->input('password');

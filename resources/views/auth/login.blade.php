@@ -1,69 +1,79 @@
+
+
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+           
+           <header>
+               <h1>Login and Registration Form</h1>
+               
+           </header>
+           <section>				
+               <div id="container_demo" >
+                   <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                   <a class="hiddenanchor" id="toregister"></a>
+                   <a class="hiddenanchor" id="tologin"></a>
+                   <div id="wrapper">
+                       <div id="login" class="animate form">
+                           <form   autocomplete="on" method="POST" action="{{ route('sendLogin') }}"> 
+                                 {{ csrf_field() }}
+                               <h1>Log in</h1> 
+                               <p> 
+                                   <label for="username" class="uname" > Your email or username </label>
+                                   <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                               </p>
+                               <p> 
+                                   <label for="password" class="youpasswd"> Your password </label>
+                                   <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" /> 
+                               </p>
+                               <p class="keeplogin"> 
+                                   <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+                                   <label for="loginkeeping">Keep me logged in</label>
+                               </p>
+                               <p > 
+                                  <input type="submit" name="login" value="Sign in">
+                               </p>
+                               <p class="change_link">
+                                   Not a member yet ?
+                                   <a href="#toregister" class="to_register">Join us</a>
+                               </p>
+                           </form>
+                       </div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                       <div id="register" class="animate form">
+                           <form   autocomplete="on" method="POST" action="{{ route('sendRegister') }}">
+                                {{ csrf_field() }}
+                               <h1> Sign up </h1> 
+                               <p> 
+                                   <label for="usernamesignup" class="uname" >Your username</label>
+                                   <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+                               </p>
+                               <p> 
+                                   <label for="emailsignup" class="youmail"  > Your email</label>
+                                   <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/> 
+                               </p>
+                               <p> 
+                                   <label for="passwordsignup" class="youpasswd" >Your password </label>
+                                   <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                               </p>
+                               <p> 
+                                   <label for="passwordsignup_confirm" class="youpasswd" >Please confirm your password </label>
+                                   <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                               </p>
+                               <p > 
+                                   <input type="submit" name="register" value="Sign up"/> 
+                               </p>
+                               <p class="change_link">  
+                                   Already a member ?
+                                   <a href="#tologin" class="to_register"> Go and log in </a>
+                               </p>
+                           </form>
+                       </div>
+                       
+                   </div>
+               </div>  
+           </section>
+       </div>
 @endsection
