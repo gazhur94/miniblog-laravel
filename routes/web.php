@@ -18,9 +18,24 @@
 
 Route::group(['middleware' => 'guest'], function() 
 {
-    Route::get('/login', 'Auth\RegisterController@showRegistrationForm')->name('register');
+    Route::get('/login', 'Auth\RegisterController@showRegistrationForm');
     //Route::post('/', 'Auth\RegisterController@register');
-    Route::post('/send-register-form', 'Auth\RegisterController@register')->name('sendRegister');
+    // Route::post('/send-info', function()
+    // {
+        
+    //     if (isset($_POST['register']))
+    //     {
+    //         dd('register');
+    //         redirect('/send-register-form');
+    //     }
+    //     else if (isset($_POST['login']))
+    //     {
+    //         dd('login');
+    //         redirect('/send-login-form');
+    //     }
+    // })->name('sendRegister');
+
+    Route::post('/send-register-form', 'Auth\RegisterController@register')->name('register');
     Route::post('/send-login-form', 'Auth\LoginController@login')->name('sendLogin');
 });
 

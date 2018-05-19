@@ -22,7 +22,7 @@
                                <h1>Log in</h1> 
                                <p> 
                                    <label for="username" class="uname" > Your email or username </label>
-                                   <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                                   <input id="username" name="name" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
                                </p>
                                <p> 
                                    <label for="password" class="youpasswd"> Your password </label>
@@ -43,24 +43,24 @@
                        </div>
 
                        <div id="register" class="animate form">
-                           <form   autocomplete="on" method="POST" action="{{ route('sendRegister') }}">
+                           <form   autocomplete="on" method="POST" action="{{ route('register') }}">
                                 {{ csrf_field() }}
                                <h1> Sign up </h1> 
                                <p> 
                                    <label for="usernamesignup" class="uname" >Your username</label>
-                                   <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+                                   <input id="usernamesignup" name="name" required="required" type="text" placeholder="mysuperusername690" />
                                </p>
                                <p> 
                                    <label for="emailsignup" class="youmail"  > Your email</label>
-                                   <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/> 
+                                   <input id="emailsignup" name="email" required="required" type="email" placeholder="mysupermail@mail.com"/> 
                                </p>
                                <p> 
                                    <label for="passwordsignup" class="youpasswd" >Your password </label>
-                                   <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                   <input id="passwordsignup" name="password" required="required" type="password" placeholder="eg. X8df!90EO"/>
                                </p>
                                <p> 
                                    <label for="passwordsignup_confirm" class="youpasswd" >Please confirm your password </label>
-                                   <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                   <input id="passwordsignup_confirm" name="password_confirmation" required="required" type="password" placeholder="eg. X8df!90EO"/>
                                </p>
                                <p > 
                                    <input type="submit" name="register" value="Sign up"/> 

@@ -53,7 +53,7 @@ class RegisterController extends Controller
             dd($e);
 
         }
-        dd('register');
+        
         $name = $request->input('name');
         $email = $request->input('email');
         $password = $request->input('password');
@@ -63,8 +63,8 @@ class RegisterController extends Controller
         //     $this->guard()->login($user);
         // }
         //dd($objUser);
-        
-        return redirect(route('account'));
+        //dd('registerContr');
+        return redirect(route('login'));
     }
 
 
@@ -80,6 +80,7 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            
         ]);
     }
 
