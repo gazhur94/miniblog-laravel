@@ -30,7 +30,7 @@ class RegisterController extends Controller
      * @var string
      */
     protected $redirectTo = '/home';
-
+//
     /**
      * Create a new controller instance.
      *
@@ -64,7 +64,7 @@ class RegisterController extends Controller
         // }
         //dd($objUser);
         //dd('registerContr');
-        return redirect(route('login'));
+        return redirect(route('success'));
     }
 
 

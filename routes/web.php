@@ -19,6 +19,10 @@
 Route::group(['middleware' => 'guest'], function() 
 {
     Route::get('/login', 'Auth\RegisterController@showRegistrationForm');
+    // Route::get('/login', function()
+    // {
+    // phpinfo();
+    // });
     //Route::post('/', 'Auth\RegisterController@register');
     // Route::post('/send-info', function()
     // {
@@ -34,9 +38,10 @@ Route::group(['middleware' => 'guest'], function()
     //         redirect('/send-login-form');
     //     }
     // })->name('sendRegister');
-
+//test
     Route::post('/send-register-form', 'Auth\RegisterController@register')->name('register');
     Route::post('/send-login-form', 'Auth\LoginController@login')->name('sendLogin');
+    Route::get('/success', 'AccountController@success')->name('success');
 });
 
 
@@ -45,8 +50,8 @@ Route::group(['middleware' => 'guest'], function()
 
 Route::group(['middleware' => 'auth'], function() 
 {
-    Route::get('/my/account', 'AccountController@index')->name('account');
+    //Route::get('/my/account', 'AccountController@index')->name('account');
 });
-Auth::routes();
+//Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');

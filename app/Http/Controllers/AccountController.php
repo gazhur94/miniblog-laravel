@@ -10,4 +10,9 @@ class AccountController extends Controller
     {
         dd('Ви увійшли у кабінет');
     }
+
+    public function success()
+    {
+        echo 'Ви успішно зареєстувались, тепер можете ' . '<a href="http:////blog/public/login">увійти</a>' ;
+    }
 }
