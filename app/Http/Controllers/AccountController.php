@@ -13,6 +13,7 @@ class AccountController extends Controller
 
     public function success()
     {
-        echo 'Ви успішно зареєстувались, тепер можете ' . '<a href="http:////blog/public/login">увійти</a>' ;
+       // echo 'Ви успішно зареєстувались, тепер можете ' . '<a href="http:////blog/public/login">увійти</a>' ;
+       echo 'account';
     }
 }

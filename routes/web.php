@@ -42,6 +42,7 @@ Route::group(['middleware' => 'guest'], function()
     Route::post('/send-register-form', 'Auth\RegisterController@register')->name('register');
     Route::post('/send-login-form', 'Auth\LoginController@login')->name('sendLogin');
     Route::get('/success', 'AccountController@success')->name('success');
+    //Route::get('/my/account', 'AccountController@index')->name('account');
 });
 
 
@@ -50,7 +51,7 @@ Route::group(['middleware' => 'guest'], function()
 
 Route::group(['middleware' => 'auth'], function() 
 {
-    //Route::get('/my/account', 'AccountController@index')->name('account');
+    Route::get('/my/account', 'AccountController@index')->name('account');
 });
 //Auth::routes();
 

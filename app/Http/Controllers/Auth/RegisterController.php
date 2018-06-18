@@ -58,13 +58,17 @@ class RegisterController extends Controller
         $email = $request->input('email');
         $password = $request->input('password');
         $objUser = $this->create(['name' => $name, 'email' => $email, 'password' => $password]);
-        // if ($isAuth)
-        // {
-        //     $this->guard()->login($user);
-        // }
+        
+        
+       
+        $this->guard()->login($objUser);
+        
         //dd($objUser);
         //dd('registerContr');
-        return redirect(route('success'));
+
+     
+
+        return redirect(route('account'))->with('success', 'Ви зареєстувались');
     }
 
 
