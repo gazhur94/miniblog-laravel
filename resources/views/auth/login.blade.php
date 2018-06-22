@@ -22,7 +22,7 @@
                                <h1>Log in</h1> 
                                <p> 
                                    <label for="username" class="uname" > Your email or username </label>
-                                   <input id="username" name="name" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                                   <input id="username" name="email" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
                                </p>
                                <p> 
                                    <label for="password" class="youpasswd"> Your password </label>

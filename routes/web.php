@@ -18,31 +18,12 @@
 
 Route::group(['middleware' => 'guest'], function() 
 {
-    Route::get('/login', 'Auth\RegisterController@showRegistrationForm');
-    // Route::get('/login', function()
-    // {
-    // phpinfo();
-    // });
-    //Route::post('/', 'Auth\RegisterController@register');
-    // Route::post('/send-info', function()
-    // {
-        
-    //     if (isset($_POST['register']))
-    //     {
-    //         dd('register');
-    //         redirect('/send-register-form');
-    //     }
-    //     else if (isset($_POST['login']))
-    //     {
-    //         dd('login');
-    //         redirect('/send-login-form');
-    //     }
-    // })->name('sendRegister');
-//test
+    Route::get('/login', 'Auth\RegisterController@showRegistrationForm')->name('login');
     Route::post('/send-register-form', 'Auth\RegisterController@register')->name('register');
     Route::post('/send-login-form', 'Auth\LoginController@login')->name('sendLogin');
     Route::get('/success', 'AccountController@success')->name('success');
-    //Route::get('/my/account', 'AccountController@index')->name('account');
+    //Route::get('/my/account', 'Auth\RegisterController@showRegistrationForm')->name('account');
+   // Route::get('/my/account', 'AccountController@index')->name('account');
 });
 
 
